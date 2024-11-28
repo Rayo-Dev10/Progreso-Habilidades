@@ -1,0 +1,64 @@
+/* Contenedor principal que agrupa todas las habilidades */
+.skills-container {
+    width: 50%; /* Ancho del contenedor en relación al contenedor principal */
+    max-width: 800px; /* Ancho máximo */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Espaciado interno alrededor del contenido */
+}
+
+/* Espaciado entre los grupos de habilidades */
+.skills-group, .skill {
+    margin-bottom: 40px; /* Espacio entre cada grupo de habilidades y cada habilidad */
+}
+
+/* Título de cada grupo de habilidades */
+.skills-group h2 {
+    font-family: 'Poppins', sans-serif; /* Fuente utilizada para el título */
+    font-size: 22px; /* Tamaño de la fuente */
+    margin-bottom: 20px; /* Espaciado debajo del título */
+    text-align: center; /* Centra el título dentro del grupo */
+    color: #6a1b9a; /* Gris oscuro para un buen contraste con el verde */
+    text-transform: uppercase; /* Poner en mayuscula los titulos */
+    font-weight: 900; /* establecer el peso de la fuente */
+}
+
+/* Título de cada habilidad dentro de un grupo */
+.skill h3 {
+    font-family: 'Poppins', sans-serif; /* Fuente utilizada para el título */
+    font-size: 18px; /* Tamaño de la fuente */
+    margin-bottom: 10px; /* Espaciado debajo del título de la habilidad */
+    text-align: left; /* Alinea el texto de los títulos de las habilidades a la izquierda */
+    text-transform: capitalize; /* capitalizar titulo de habilidades */
+}
+
+/* Contenedor de las barras de progreso de cada habilidad */
+.progress-bar-container {
+    display: flex; /* Usa Flexbox para alinear las barras de progreso */
+    gap: 5px; /* Espacio entre las barras de progreso */
+}
+
+/* Estilo base de cada barra de progreso */
+.progress-bar {
+    width: 25%; /* Cada barra representa un 25% del total de la habilidad */
+    height: 15px; /* Altura de la barra de progreso */
+    background-color: #e0e0e0; /* Color de fondo de la barra cuando no está llena */
+    border-radius: 10px; /* Bordes redondeados */
+    position: relative; /* Posicionamiento relativo para la barra de progreso */
+}
+
+/* Barra de progreso cuando está llena (representa el nivel alcanzado) */
+.progress-bar.filled {
+    background-color: #4caf50; /* Color verde cuando está llena */
+}
+
+/* Barra de progreso cuando no está llena (representa el nivel no alcanzado) */
+.progress-bar:not(.filled) {
+    background-color: #808080; /* Color gris cuando no está llena */
+}
+
+/* Controla el estilo de la barra de progreso, ajustando su tamaño */
+.progress {
+    height: 100%; /* La altura de la barra se ajusta al 100% de su contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: width 0.5s ease; /* Transición suave para el cambio de tamaño */
+}
